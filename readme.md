@@ -1,25 +1,28 @@
 # 可视化——用D3.js实现甘特图
 #### 甘特图
 甘特图（Gantt Chart）在1910年由亨利甘特开发出来。甘特图本质上是条形图，特点在于它是基于时间序列的，是对特定事件、类型、任务等持续时间长短的可视化表现，通常被用于制作项目规划管理、个人计划等。如Omniplan是一款专门用于项目管理的工具，它便是基于甘特图进行可视化的。
-[omniplan软件截图](docPic/1.png)
-以下是甘特图的一些例子（图片均来自http://datavizproject.com/data-type/gannt-chart/），同其他可视化图表一样，它可以通过不同的颜色、形状、大小来丰富自身的表现力。
 
-[DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-11-02-kl.-11.06.18.png)
-[DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Image-2.jpg)
-[DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/timelines.png)
-[DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-09-26-kl.-14.28.20.png)
+![omniplan软件截图](docPic/1.png)
 
-甘特图一般表现为以时间序列为横坐标，纵向则是所要表现的基于时间变化的对象。通过图片可以发现它与一般影视制作软件的时间轴版块特别相像，如Flash、After Effect等软件，可以在时间轴版块的纵向上添加图层、音乐等。因此其实甘特图除了特别适合做项目管理之外，它也适合应用在音乐、影视等基于时间线发展的内容分析上。如下图，在2013年奥斯卡奖颁奖之前，纽约时报对5部获得最佳影片提名电影的预告片进行分析（http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html），通过将预告片中出现的镜头与其在正片中的位置、时长进行对比，分析各个电影是如何剪辑预告片，对作品进行宣传。
+以下是甘特图的一些例子（图片均来自[datavizproject.com](http://datavizproject.com/data-type/gannt-chart/)），同其他可视化图表一样，它可以通过不同的颜色、形状、大小来丰富自身的表现力。
 
-[Dissecting a Trailer: The Parts of the Film That Make the Cut](docPic/2.png)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-11-02-kl.-11.06.18.png)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Image-2.jpg)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/timelines.png)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-09-26-kl.-14.28.20.png)
+
+甘特图一般表现为以时间序列为横坐标，纵向则是所要表现的基于时间变化的对象。通过图片可以发现它与一般影视制作软件的时间轴版块特别相像，如Flash、After Effect等软件，可以在时间轴版块的纵向上添加图层、音乐等。因此其实甘特图除了特别适合做项目管理之外，它也适合应用在音乐、影视等基于时间线发展的内容分析上。如下图，在2013年奥斯卡奖颁奖之前，纽约时报对5部获得[最佳影片提名电影的预告片](http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html)进行分析，通过将预告片中出现的镜头与其在正片中的位置、时长进行对比，分析各个电影是如何剪辑预告片，对作品进行宣传。
+
+![Dissecting a Trailer: The Parts of the Film That Make the Cut](docPic/2.png)
+
 
 接下来将介绍如何使用D3这个JS插件做一个基于《黑色孤儿》中演员在剧中出现场景时长的甘特图。
 #### 用D3实现甘特图
-[https://d3js.org/](docPic/3.png)
+![https://d3js.org/](docPic/3.png)
 > D3.js是一个用动态图形显示数据的JavaScript库，一个数据可视化的工具。兼容W3C标准，并且利用广泛实现的SVG，JavaScript，和CSS标准。
 开始实例之前，需要对基本的网页制作有所了解，html（标签元素，div/img/p...；属性，class/id/style...），css（样式设置，margin/font/background...），javascript（函数；DOM事件...）或者jQuery（javascript库，简化javascript编程），以及SVG（元素，rect/line/path...；属性：x/y/fill...）
 
-[Orphan Black 数据可视化](docPic/4.gif)
+![Orphan Black 数据可视化](docPic/4.gif)
 
 效果图如图，将美剧《黑色孤儿》中演员Tatiana Maslany（一人饰多角）在剧中第一、二季出演的情况可视化表现出来，可以直观地看出单个演员在剧中所占的份量。布局很简单，上面为演员饰演的几个角色的图片标签，下面就是由D3数据驱动所绘制出的甘特图，纵坐标为第一、二季的集数，横坐标就是每一集中的时间序列。图片标签及其交互主要是由css和javascript简单实现的，不做过多介绍，下面重点介绍中间使用D3库所绘制的甘特图部分的代码。
 
@@ -198,11 +201,11 @@ allImgs.mouseout(function(){
 
 5. 对html其他元素进行布局、样式设置，最终效果如下。
 现在效果还比较简单，后期完善可以添加一些文字说明，通过html或者svg text绘制都是可以的。
-[最终效果图](docPic/15.png)
+![最终效果图](docPic/15.png)
 
 
 
-完整案例地址： http://wykay-z.site/OrphanBlack/index.html
+完整案例地址： http://wykay-z.site/OrphanBlack/index.html     
 完整代码地址： https://github.com/Wykay-z/Orphan-Black-Gantt
 
 
