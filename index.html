@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gantt —— Wykay-z</title>
+</head>
+<style>
+body {
+	background: none;
+}
+	#mainGantt {
+		background: none;
+	}
+	#mainGantt svg{
+		margin-top: 120px;
+		margin-left: 40px;
+	}
+	.tick {
+		fill: #999;
+		font-size: 11px;
+	}
+	#img {
+		position: absolute;
+		width: 760px;
+		padding-top: 20px;
+		text-align: center;
+	}
+	#img .item {
+		width: 56px;
+/*		height: 72px;*/
+		margin-right: 10px;
+		display: inline-block;
+		opacity: .4;
+		cursor: pointer;
+	}
+	#img .item:hover {
+		opacity: 1;
+		transition: all .2s ease;
+	}
+	#img .item img {
+		width: 100%;
+		display: block;
+	}
+	#img .item span {
+		display: inline-block;
+		width: 100%;
+		background: #ccc;
+		height: 24px;
+		line-height: 24px;
+		color: #fff;
+		font-size: 12px;
+	}
+	#img #Sarah span{
+		background: #1da4d1;
+	}
+	#img #Alison span{
+		background: #f41c54;
+	}
+	#img #Helena span{
+		background: #ffcd00;
+	}
+	#img #Cosima span{
+		background: #36bf63;
+	}
+	#img #Rachel span{
+		background: #9875b2;
+	}
+	#img #Tony span{
+		background: #95a673;
+	}
+</style>
+<body>
+<div id="img">
+	<div class="item" id="Sarah">
+		<img src="img/sm_0.png">
+		<span>Sarah</span>
+	</div>
+	<div class="item" id="Alison">
+		<img src="img/sm_1.png">
+		<span>Alison</span>
+	</div>
+	<div class="item" id="Helena">
+		<img src="img/sm_2.png">
+		<span>Helena</span>
+	</div>
+	<div class="item" id="Cosima">
+		<img src="img/sm_3.png">
+		<span>Cosima</span>
+	</div>
+	<div class="item" id="Rachel">
+		<img src="img/sm_4.png">
+		<span>Rachel</span>
+	</div>
+	<div class="item" id="Tony">
+		<img src="img/sm_5.png">
+		<span>Tony</span>
+	</div>
+</div>
+<div id="mainGantt"></div>
+	
+<script src="jquery.js"></script>
+<script src="d3.v3.min.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
