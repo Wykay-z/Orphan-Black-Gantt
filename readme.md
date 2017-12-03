@@ -6,19 +6,19 @@
 
 以下是甘特图的一些例子（图片均来自[datavizproject.com](http://datavizproject.com/data-type/gannt-chart/)），同其他可视化图表一样，它可以通过不同的颜色、形状、大小来丰富自身的表现力。
 
-![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-11-02-kl.-11.06.18.png =250x)
-![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Image-2.jpg =250x)
-![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/timelines.png =250x)
-![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-09-26-kl.-14.28.20.png =250x)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-11-02-kl.-11.06.18.png)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Image-2.jpg)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/timelines.png)
+![DataVizProject 甘特图](http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-09-26-kl.-14.28.20.png)
 
 甘特图一般表现为以时间序列为横坐标，纵向则是所要表现的基于时间变化的对象。通过图片可以发现它与一般影视制作软件的时间轴版块特别相像，如Flash、After Effect等软件，可以在时间轴版块的纵向上添加图层、音乐等。因此其实甘特图除了特别适合做项目管理之外，它也适合应用在音乐、影视等基于时间线发展的内容分析上。如下图，在2013年奥斯卡奖颁奖之前，纽约时报对5部获得[最佳影片提名电影的预告片](http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html)进行分析，通过将预告片中出现的镜头与其在正片中的位置、时长进行对比，分析各个电影是如何剪辑预告片，对作品进行宣传。
 
-![Dissecting a Trailer: The Parts of the Film That Make the Cut](docPic/2.png =250x)
+![Dissecting a Trailer: The Parts of the Film That Make the Cut](docPic/2.png)
 
 
 接下来将介绍如何使用D3这个JS插件做一个基于《黑色孤儿》中演员在剧中出现场景时长的甘特图。
 #### 用D3实现甘特图
-![https://d3js.org/](docPic/3.png =250x)
+![https://d3js.org/](docPic/3.png)
 
 > D3.js是一个用动态图形显示数据的JavaScript库，一个数据可视化的工具。兼容W3C标准，并且利用广泛实现的SVG，JavaScript，和CSS标准。    
 
