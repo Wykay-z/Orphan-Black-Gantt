@@ -22,7 +22,7 @@
 
 > D3.js是一个用动态图形显示数据的JavaScript库，一个数据可视化的工具。兼容W3C标准，并且利用广泛实现的SVG，JavaScript，和CSS标准。    
 
-开始实例之前，需要对基本的网页制作有所了解，html（标签元素，div/img/p...；属性，class/id/style...），css（样式设置，margin/font/background...），javascript（函数；DOM事件...）或者jQuery（javascript库，简化javascript编程），以及SVG（元素，rect/line/path...；属性：x/y/fill...）
+*开始实例之前，需要对基本的网页制作有所了解，html（标签元素，div/img/p...；属性，class/id/style...），css（样式设置，margin/font/background...），javascript（函数；DOM事件...）或者jQuery（javascript库，简化javascript编程），以及SVG（元素，rect/line/path...；属性：x/y/fill...）*
 
 ![Orphan Black 数据可视化](docPic/4.gif)
 
